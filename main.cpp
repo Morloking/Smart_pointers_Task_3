@@ -13,13 +13,13 @@ public:
 
     T& operator*() {
         if (ptr == nullptr) {
-            throw std::runtime_error("UniquePointer: operator* null ptr");
+            throw std::runtime_error("UniquePointer: operator* crash - null ptr");
         }
         return *ptr;
     }
     T* operator->() {
         if (ptr == nullptr) {
-            throw std::runtime_error("UniquePointer: member access on null pointer");
+            throw std::runtime_error("UniquePointer: operator-> crash - null ptr");
         }
         return ptr;
     }
